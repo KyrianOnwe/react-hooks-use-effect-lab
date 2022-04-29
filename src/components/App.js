@@ -19,6 +19,10 @@ function App() {
     }
   }
 
+    function handleSetQuestions(){
+      setQuestions(currentQuestion)
+    }
+
   return (
     <main>
       <section>
@@ -26,6 +30,7 @@ function App() {
           <Question
             question={currentQuestion}
             onAnswered={handleQuestionAnswered}
+            onForward={handleSetQuestions}
           />
         ) : (
           <>
